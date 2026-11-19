@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ANTARAKALA — rekonstruksi CNN 1D dari checkpoint state_dict yang tersedia.
+KIDOSCOPE — rekonstruksi CNN 1D dari checkpoint state_dict yang tersedia.
 
 Catatan penting:
 - File training asli tidak tersedia. Arsitektur non-parametrik (stride/aktivasi/pooling)
@@ -245,7 +245,7 @@ def main():
         })
 
     (ROOT/"lung_samples.json").write_text(json.dumps(manifest,indent=2),encoding="utf-8")
-    js="window.ANTARAKALA_LUNG_SAMPLES = "+json.dumps(manifest,ensure_ascii=False,separators=(",",":"))+";\n"
+    js="window.KIDOSCOPE_LUNG_SAMPLES = "+json.dumps(manifest,ensure_ascii=False,separators=(",",":"))+";\n"
     (ROOT/"lung_samples.js").write_text(js,encoding="utf-8")
     print(json.dumps({"samples":len(manifest),"counts":{n:sum(1 for x in manifest if x['label']==n) for n in CLASS_NAMES},"params":nparams},indent=2))
 

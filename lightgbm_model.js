@@ -1,4 +1,4 @@
-/* ANTARAKALA Model B — LightGBM + exact TreeSHAP export
+/* KIDOSCOPE Model B — LightGBM + exact TreeSHAP export
    Source: tugas3_balanced_weight_only_all_classes.zip
    Inference and TreeSHAP run locally in the browser.
    TreeSHAP is computed exactly in raw-score space using the model's
@@ -99,5 +99,5 @@ function explain(features,classIndex){
     sumCheck:baseValue+phi.reduce((a,b)=>a+b,0)
   };
 }
-g.ANTARAKALA_LGBM={predict,explain,featureNames:M.featureNames.slice(),highThreshold:M.highThreshold,classNames:M.classNames.slice()};
+g.KIDOSCOPE_LGBM={predict,explain,featureNames:M.featureNames.slice(),highThreshold:M.highThreshold,classNames:M.classNames.slice()};
 })(window);

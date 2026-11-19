@@ -1,4 +1,4 @@
-# Rekonstruksi CNN & Grad-CAM ANTARAKALA
+# Rekonstruksi CNN & Grad-CAM KIDOSCOPE
 
 Checkpoint `model/full_data_100epochs.pt` hanya berisi `state_dict`; kode training asli tidak tersedia. Karena itu, bagian yang tidak tersimpan di checkpoint (stride, aktivasi, pooling, dan preprocessing audio) direkonstruksi untuk kebutuhan purwarupa.
 
